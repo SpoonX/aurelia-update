@@ -1,6 +1,6 @@
 {
   "name": "aurelia-update",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "bin": "./bin/aurelia-update.js",
   "description": "Update all aurelia dependencies easily.",
   "main": "index.js",
