@@ -1,0 +1,21 @@
+{
+  "name": "aurelia-update",
+  "version": "1.0.0",
+  "bin" : "./index.js",
+  "description": "Update all aurelia dependencies easily.",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/SpoonX/aurelia-update.git"
+  },
+  "keywords": [
+    "aurelia",
+    "update"
+  ],
+  "author": "RWOverdijk",
+  "license": "BSD-2-Clause",
+  "bugs": {
+    "url": "https://github.com/SpoonX/aurelia-update/issues"
+  },
+  "homepage": "https://github.com/SpoonX/aurelia-update#readme"
+}
