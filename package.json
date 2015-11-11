@@ -1,7 +1,7 @@
 {
   "name": "aurelia-update",
-  "version": "1.0.2",
-  "bin" : "./bin/aurelia-update.js",
+  "version": "1.0.3",
+  "bin": "./bin/aurelia-update.js",
   "description": "Update all aurelia dependencies easily.",
   "main": "index.js",
   "repository": {
@@ -17,5 +17,8 @@
   "bugs": {
     "url": "https://github.com/SpoonX/aurelia-update/issues"
   },
-  "homepage": "https://github.com/SpoonX/aurelia-update#readme"
+  "homepage": "https://github.com/SpoonX/aurelia-update#readme",
+  "dependencies": {
+    "jspm": "^0.16.14"
+  }
 }

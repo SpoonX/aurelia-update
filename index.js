@@ -2,6 +2,8 @@ var dependencies    = require(process.cwd() + '/package.json').jspm.dependencies
     dependencyNames = Object.getOwnPropertyNames(dependencies),
     jspm            = require('jspm/api');
 
+jspm.setPackagePath(process.cwd());
+
 function installNextDependency () {
   if (!dependencyNames || 0 === dependencyNames.length) {
     return console.log('> Finished.');
@@ -16,7 +18,7 @@ function installNextDependency () {
 
   notifyOnProgress(dependencyName);
 
-  jspm.install(dependencyName, depencyInstallPath, {parent: true})
+  jspm.install(dependencyName, depencyInstallPath, {summary: true})
     .then(function () {
       notifyOnProgress(dependencyName, true);
       installNextDependency();
