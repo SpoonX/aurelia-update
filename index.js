@@ -50,4 +50,4 @@ function notifyOnProgress (dependency, success) {
 
 console.log('> Starting update.');
 
-installNextDependency();
+module.exports = installNextDependency;
