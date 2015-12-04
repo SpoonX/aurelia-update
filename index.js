@@ -18,15 +18,21 @@ function installNextDependency () {
 
   notifyOnProgress(dependencyName);
 
-  jspm.install(dependencyName, depencyInstallPath, {summary: true})
+  jspm.install(dependencyName, {summary: true})
     .then(function () {
       notifyOnProgress(dependencyName, true);
       installNextDependency();
     })
     .catch(function (error) {
-      console.log(error);
-      notifyOnProgress(dependencyName, error.toString());
-      installNextDependency();
+      jspm.install(dependencyName, depencyInstallPath, {summary: true})
+        .then(function () {
+          notifyOnProgress(dependencyName, true);
+          installNextDependency();
+        })
+        .catch(function (error) {
+          notifyOnProgress(dependencyName, error.toString());
+          installNextDependency();
+        });
     });
 }
 
